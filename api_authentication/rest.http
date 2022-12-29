@@ -1,0 +1,40 @@
+
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjQ5MzY5MDYsImV4cCI6MTY2NDkzNjkyMSwiYXVkIjoiNjMzYzQ0OTMxMmUzMTU3OTA1Mzk2ZTQyIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.HcHiqBV2HaO-mmIrYZOrwUoEODWTk2HtMz7_SK3dNuI
+
+
+###Login route
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "quangminh@gmail.com",
+    "password": "1234"
+}
+
+###Register route
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "quangminh@gmail.com",
+    "password": "1234"
+}
+
+
+###Refresh Route
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken":
+    "f19e7cf0406d2f29176eeb2b4092fbabd5361d596b68a9d051957b3ac3ce9a03"
+}
+
+###logout Route
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "f19e7cf0406d2f29176eeb2b4092fbabd5361d596b68a9d051957b3ac3ce9a03"
+}
